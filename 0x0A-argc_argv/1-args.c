@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main- Prints number of arguments entered
+ * main - Prints number of arguments entered
  * @argc: Number of arguments
- *@argv: Array of arguments
- *Return: 0 (success)
+ * @argv: Array of arguments
+ * Return: 0 (success)
  */
 
 int main(int argc, __attribute__((unused)) char **argv)
