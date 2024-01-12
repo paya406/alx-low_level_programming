@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		product *= atoi(argv[i]);
 
-		printf("%d", product);
+		printf("%d\n", product);
 
 	}
 	else
