@@ -1,49 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - prints the sum of arguments followed by a new line
  * @argc: number of arguments
  * @argv: array of arguments
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
-	if (argc < 2)
+	int i, j, sum = 0;
+
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-		return (0);
-	}
 
-	int sum = 0;
-
-	for (int i = 1; i < argc; i++)
-	{
-		char *currentNumber = argv[i];
-
-		int isDigit = 1;
-
-		for (int j = 0; currentNumber[j] != '\0'; j++)
+		for (j = 0; argv[i][j]; j++)
 		{
-			if (currentNumber[j] < '0' || currentNumber[j] > '9')
-			{
-				isDigit = 0;
-				break;
-			}
-		}
-
-		if (!isDigit)
-		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+				return (printf("Error\n"), 1);
 		}
 
 
-		sum += atoi(currentNumber);
+		sum += atoi(argv[i]);
 	}
-
 
 	printf("%d\n", sum);
-
 	return (0);
 }
