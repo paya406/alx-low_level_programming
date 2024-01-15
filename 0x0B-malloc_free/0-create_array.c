@@ -9,16 +9,16 @@
 */
 char *create_array(unsigned int size, char c)
 {
-	char array;
+	char *array;
 
-	if(!size)
-		return(NULL);
+	if (!size)
+		return (NULL);
 
 	array = malloc(sizeof(char) * size);
 
-	if(!array)
-		return(NULL);
+	if (!array)
+		return (NULL);
 
 	memset(array, c, size);
-	return(array);
+	return (array);
 }
